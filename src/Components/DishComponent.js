@@ -1,11 +1,6 @@
 import React, { useState } from "react";
 import style from "./DishCompStyle";
-
-// dialog
-import DialogTitle from "@mui/material/DialogTitle";
-import Dialog from "@mui/material/Dialog";
-import DialogContent from "@mui/material/DialogContent";
-import DialogActions from "@mui/material/DialogActions";
+import "./PopupStyle.css";
 
 const DishComponent = (props) => {
   console.log(props);
@@ -13,34 +8,34 @@ const DishComponent = (props) => {
 
   return (
     <>
-      <Dialog open={show}>
-        <DialogTitle id="alert-dialog-title"></DialogTitle>
-        <DialogContent>
-          <table>
-            <thead>
-              <tr>
-                <th>Ingredients</th>
-              </tr>
-            </thead>
-            <tbody>
-              {props.dish.ingredients.map((ingredientObj) => (
-                <tr>
-                  <td>{ingredientObj.text}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </DialogContent>
-        <DialogActions>
-          <style.IngredientText onClick={() => window.open(props.dish.url)}>
-            See More
-          </style.IngredientText>
-          <style.SeeMoreText onClick={() => setShow(false)}>
-            {"Close"}
-          </style.SeeMoreText>
-        </DialogActions>
-      </Dialog>
-      {/* DIalog box ended */}
+      {show && (
+        <div className="overlay">
+          <div className="popup">
+            <div className="content">
+              <h3>Ingredients</h3>
+              <ul>
+                {props.dish.ingredients.map((ingredientObj) => (
+                  <li>{ingredientObj.text}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="buttons">
+              <style.SeeMoreText
+                className="more"
+                onClick={() => window.open(props.dish.url)}
+              >
+                See More
+              </style.SeeMoreText>
+              <style.IngredientText
+                className="close"
+                onClick={() => setShow(false)}
+              >
+                Close
+              </style.IngredientText>
+            </div>
+          </div>
+        </div>
+      )}
 
       <style.DishContainer>
         <style.CoverImage src={props.dish.image} />

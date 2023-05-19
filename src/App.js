@@ -18,7 +18,7 @@ function App() {
     <Container>
       <HeaderComponent updateRecipeList={updateRecipeList} />
       <DishesListComponent dishesList={recipeList} />
-    </Container> 
+    </Container>
   );
 }
 

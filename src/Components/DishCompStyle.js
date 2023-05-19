@@ -47,10 +47,12 @@ const SeeMoreText = styled(IngredientText)`
   }
 `;
 
-export default {
+const DishCompStyle = {
   DishContainer,
   CoverImage,
   DishName,
   IngredientText,
   SeeMoreText,
 };
+
+export default DishCompStyle

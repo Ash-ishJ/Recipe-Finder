@@ -43,15 +43,17 @@ const SearchInput = styled.input`
   font-size: 16px;
   font-weight: bold;
   width: 100%;
-  color: #1B1B32;
+  color: #1b1b32;
   background-color: white;
 `;
 
-export default {
-    Header,
-    AppNameComponent,
-    SearchComponent,
-    AppIcon,
-    SearchIcon,
-    SearchInput
-}
+const HeaderStyle = {
+  Header,
+  AppNameComponent,
+  SearchComponent,
+  AppIcon,
+  SearchIcon,
+  SearchInput,
+};
+
+export default HeaderStyle;
