@@ -1,11 +1,11 @@
 # Recipe App
 This is a simple recipe app built with React. The app allows users to enter the name of any dish or any ingredient which will be used in the recipe and it will generate some recipes based on it.
 
----
+
 ## Installation
 To start the app, run `npm start`. This will start the app on http://localhost:3000
 
----
+
 ## Components
 This App is made up of several components:
 
@@ -17,5 +17,5 @@ This App is made up of several components:
 
 - The **DishComponent** component is responsible for rendering a single recipe.
 
----
+
 ##### You can view it [here](https://ashish12016540-password-generator.netlify.app/).
