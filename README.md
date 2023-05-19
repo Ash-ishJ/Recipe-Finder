@@ -18,4 +18,4 @@ This App is made up of several components:
 - The **DishComponent** component is responsible for rendering a single recipe.
 
 
-##### You can view it [here](https://ashish12016540-password-generator.netlify.app/).
+##### You can view it [here](https://recipe-app-0401.netlify.app/).
